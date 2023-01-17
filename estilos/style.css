@@ -36,15 +36,30 @@ section#telefone {
     background:   url('../imagens/frame-iphone.png') no-repeat;
 }
 
-section#redes-sociais  img {
+section#redes-sociais img {
     width: 50px;
     margin: 10px;
     border-radius: 50%;
     box-shadow: 2px 2px 5px; color: black;
+    box-sizing: border-box;
+    
 }
 
 section#redes-sociais {
     text-align: right;
+}
+
+
+section#redes-sociais img:hover{
+   border: 2px solid white;
+   transform: translate(-3px,-3px);  /*faz os botões levanterem*/
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.671);
+   transition: transform 0.9s, border 0.5s; /*Determina a velocidade com que os botões levantam*/
+}
+
+/*Para essa configuração funcionar deve ser colocado em "section#redes-sociais img{} o seguinte atributo (box-sizing: border-box;) fica em outra configuração*/
+section#redes-sociais img:active {
+    transform: scale(95%);   
 }
 
 iframe#tela{
